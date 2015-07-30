@@ -3,5 +3,8 @@
 {% block content %}
 
 <h1>Hello World</h1>
-
+<form method = 'POST' action = ''> {% csrf_token %}
+{{ form.as_p }} <!-- import form as a paragraph -->
+<input type = 'submit' value = 'join' class ='btn btn-default'/>
+</form>
 {% endblock %}
