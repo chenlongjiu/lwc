@@ -10,3 +10,5 @@ class EmailForm(forms.Form):
 class JoinForm(forms.ModelForm):
 	class Meta:
 		model = Join
+		fields = ["email"]#which field need to show
+		#exclude = [] #which field you don't need
