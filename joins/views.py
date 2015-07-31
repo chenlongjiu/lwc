@@ -17,10 +17,10 @@ def home(request):
 
 	#this is using model forms
 	form = JoinForm(request.POST or None)
-	if form.is_valid:
+	if form.is_valid():
 		#new_join = form.save(commit=False)
 		email =  form.cleaned_data['email']
-		new_join2 , create = Join.objects.get_or_create(email = email)
+		new_join2,create  = Join.objects.get_or_create(email = email)
 		#new_join.save() #ok with duplicate
 	context = {"form":form}
 	template = "home.html"
